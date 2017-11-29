@@ -220,10 +220,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <SubType>Designer</SubType>
     </Content>
-    <None Include="Dockerfile" />
-    <None Include=".dockerignore">
-      <DependentUpon>Dockerfile</DependentUpon>
-    </None>
     <None Include="Project_Readme.html" />
     <None Include="Properties\PublishProfiles\CreatePackage.pubxml" />
     <None Include="Properties\Settings.settings">

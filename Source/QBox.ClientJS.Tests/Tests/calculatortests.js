@@ -1,3 +1,5 @@
+/// <reference path="../scripts/typings/jasmine/jasmine.d.ts"/>
+/// <reference path="../../QBox.ClientJS/calculator.ts"/>
 describe('calculator should', function () {
     it('add numbers', function () {
         var calc = new calculator();
@@ -20,3 +22,4 @@ describe('calculator should', function () {
         expect(result).toBe(4);
     });
 });
+//# sourceMappingURL=calculatortests.js.map
