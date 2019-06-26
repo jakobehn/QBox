@@ -15,4 +15,3 @@ var calculator = (function () {
     };
     return calculator;
 }());
-//# sourceMappingURL=calculator.js.map
