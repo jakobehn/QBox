@@ -1,0 +1,19 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: frontend
+spec:
+  replicas: {{ .Values.frontend.replicas }}
+  template:
+    metadata:
+      labels:
+        app: qbox
+        tier: frontend
+    spec:
+      containers:
+      - name: frontend
+        image: "{{ .Values.frontend.image.repository }}:{{ .Values.frontend.image.tag }}"
+        ports:
+        - containerPort: {{ .Values.frontend.containerPort }}
+      nodeSelector:
+        "beta.kubernetes.io/os": windows  

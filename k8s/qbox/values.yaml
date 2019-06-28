@@ -1,0 +1,23 @@
+frontend: 
+  replicas: 1
+  image:
+    repository: jakobehn/qboxweb
+    tag: "1.0"
+  containerPort: 80    
+  service:
+    type: LoadBalancer
+    port: 80
+
+backend:
+  replicas: 1
+  image:
+    repository: jakobehn/qboxapi
+    tag: "1.0"
+  containerPort: 80
+
+db:
+  replicas: 1
+  image:
+    repository: microsoft/mssql-server-linux
+    tag: "2017-CU9"
+  containerPort: 1433
