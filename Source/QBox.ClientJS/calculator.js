@@ -1,4 +1,4 @@
-var calculator = (function () {
+var calculator = /** @class */ (function () {
     function calculator() {
     }
     calculator.prototype.add = function (num1, num2) {
@@ -15,3 +15,4 @@ var calculator = (function () {
     };
     return calculator;
 }());
+//# sourceMappingURL=calculator.js.map

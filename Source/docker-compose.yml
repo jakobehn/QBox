@@ -1,0 +1,27 @@
+version: '3.4'
+
+services:
+  qboxweb:
+    image: ${DOCKER_REGISTRY-}qboxweb
+    build:
+      context: .\QBox.Web
+      dockerfile: Dockerfile
+    ports:
+      - 80:80
+    
+  qboxapi:
+    image: ${DOCKER_REGISTRY-}qboxapi
+    build:
+      context: .\QBox.Api
+      dockerfile: Dockerfile
+
+  qboxdb:
+    image: microsoft/mssql-server-windows-express
+    environment:
+      ACCEPT_EULA: Y
+      SA_PASSWORD: 1qaz2WSX3edc
+    ports:
+      - 1433:1433
+
+
+
